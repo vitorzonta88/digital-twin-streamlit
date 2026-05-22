@@ -14,7 +14,7 @@ FIREBASE_URL = "https://digitaltwim-default-rtdb.firebaseio.com/.json"
 
 st.title("📊 Monitoramento de Temperatura")
 
-response = requests.get(FIREBASE_URL, timeout=30)
+response = requests.get(FIREBASE_URL, timeout=10)
 
 if response.status_code != 200:
     st.error(f"Erro Firebase: {response.status_code}")
